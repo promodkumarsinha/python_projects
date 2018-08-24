@@ -1,0 +1,24 @@
+import turtle
+
+def draw_spokewheel():
+    spokewheel = turtle.Turtle()
+    spokewheel.shape("turtle")
+    spokewheel.color("red")
+    spokewheel.speed(1000000)
+    spokewheel.width(1)
+    wheel_loop_counter = 0
+    while (wheel_loop_counter < 72):
+
+        square_loop_counter = 0
+        while (square_loop_counter <4):
+            spokewheel.forward(200)
+            spokewheel.right(270)
+            square_loop_counter = square_loop_counter + 1
+
+        spokewheel.right(5)
+        wheel_loop_counter = wheel_loop_counter + 1
+
+window = turtle.Screen()
+window.bgcolor("white")
+draw_spokewheel()
+window.exitonclick()
