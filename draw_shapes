@@ -1,0 +1,79 @@
+import turtle
+
+def draw_rectangle():
+
+    rectangle = turtle.Turtle()
+    position = rectangle.position()
+    print (position)
+    rectangle.penup()
+    rectangle.setposition(30,30)
+    rectangle.shape("turtle")
+    rectangle.color("blue")
+    rectangle.speed(2)
+    rectangle.pendown()
+    rectangle.width(5)
+    loop_counter = 0
+    while (loop_counter <2):
+        rectangle.forward(200)
+        rectangle.right(90)
+        rectangle.forward(100)
+        rectangle.right(90)
+        loop_counter = loop_counter + 1
+
+def draw_circle():
+    
+    #draw circle
+    circle = turtle.Turtle()
+    circle.penup()
+    circle.setposition(100,100)
+    position = circle.position()
+    print (position)
+    circle.shape("classic")
+    circle.color("black")
+    circle.speed(1)
+    circle.pendown()
+    circle.width(10)
+    circle.circle(100)
+
+def draw_triangle():
+
+    triangle = turtle.Turtle()
+    triangle.penup()
+    triangle.setposition(-200,200)
+    position = triangle.position()
+    print (position)
+    triangle.shape("triangle")
+    triangle.color("green")
+    triangle.speed(1)
+    triangle.pendown()
+    triangle.width(5)
+
+    #equilateral triangle
+    triangle.forward(100)
+    loop_counter = 0
+    while (loop_counter <=1):
+        triangle.left(120)
+        triangle.forward(100)
+        loop_counter = loop_counter + 1
+
+    triangle.penup()
+    triangle.setposition(-50,-20)
+    position = triangle.position()
+    print (position)
+    triangle.pendown()
+    
+    #right angle triangle
+    triangle.right(120)
+    triangle.forward(100)
+    triangle.left(90)
+    triangle.forward(100)
+    triangle.left(135)
+    triangle.forward(141.421356)
+
+    
+window = turtle.Screen()
+window.bgcolor("purple")
+draw_rectangle()
+draw_circle()
+draw_triangle()
+window.exitonclick()
